@@ -1,19 +1,23 @@
 <!DOCTYPE html>
 <html lang="zh-TW">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>我的自我介紹</title>
-        <link rel="stylesheet" href="style.css">
-    </head>
-    <body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>我的網站 - AWS Technical Essentials</title>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/style.css" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+
         <header>
             <h1>你好，我叫林晏寬</h1>
         </header>
 
         <section id="about">
             <h2>自我介紹</h2>
-            <p>我叫林晏寬，目前就讀資工三甲，MBTI:ENTJ 對於程式設計以及技術創新充滿熱情。平時的生活中，我的興趣是打羽球、溜滑板和旅遊這是我放鬆身心的重要方式。平時空閒的時候我學習各種電腦科學的知識，特別對區塊鏈技術和智能合約有興趣，未來，我希望能把自己學到的知識應用到實際生活中。</p>
+            <p>我叫林晏寬，目前就讀資工三甲，MBTI:ENTJ，對程式設計和技術創新充滿熱情。我愛好打羽球、溜滑板和旅遊，並對區塊鏈和智能合約技術充滿興趣。</p>
         </section>
 
         <section id="projects">
@@ -24,7 +28,6 @@
             </div>
         </section>
 
-        
         <section id="audio">
             <h2>我的音檔</h2>
             <audio controls>
@@ -33,24 +36,38 @@
             </audio>
         </section>
 
-        
         <section id="video">
             <h2>我的影片</h2>
-            <video controls  height="400" width="600">
+            <video controls height="400" width="600">
                 <source src="https://website-daniel.s3.amazonaws.com/748965626.641854.mp4" type="video/mp4">
                 您的瀏覽器不支援影片播放。
             </video>
         </section>
 
+        <section id="dynamic-data">
+            <h2>EC2 動態數據</h2>
+            <div class="jumbotron">
+                <p>
+                    <?php include('get-index-meta-data.php'); ?>
+                    <hr />
+                    <?php include('get-cpu-load.php'); ?>
+                </p>
+            </div>
+        </section>
+
         <section id="contact">
             <h2>聯絡方式</h2>
-            <p>以下是我的聯絡方式:<br><br>Email: daniel40906@gmail.com<br><br>phone: 0909771479<br><br>github: <a href="https://github.com/daniel921213">https://github.com/daniel921213</a></p>
+            <p>以下是我的聯絡方式:<br>Email: daniel40906@gmail.com<br>Phone: 0909771479<br>GitHub: <a href="https://github.com/daniel921213">https://github.com/daniel921213</a></p>
         </section>
 
         <footer>
             <p>&copy; 2024 林晏寬</p>
         </footer>
 
-        <script src="script.js"></script>
-    </body>
+    </div>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js"></script>
+</body>
 </html>
