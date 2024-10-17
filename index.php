@@ -4,8 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>我的網站 - AWS Technical Essentials</title>
-    <link href="css/bootstrap.min.css" rel="stylesheet">
-    <link href="css/style.css" rel="stylesheet">
+    <link href="bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
 </head>
 
 <body>
@@ -13,6 +13,16 @@
 
         <header>
             <h1>你好，我叫林晏寬</h1>
+
+            <!-- EC2 動態數據區塊移到 header 中 -->
+            <section id="dynamic-data" class="jumbotron">
+                <h2>EC2 動態數據</h2>
+                <p>
+                    <?php include('get-index-meta-data.php'); ?>
+                    <hr />
+                    <?php include('get-cpu-load.php'); ?>
+                </p>
+            </section>
         </header>
 
         <section id="about">
@@ -44,17 +54,6 @@
             </video>
         </section>
 
-        <section id="dynamic-data">
-            <h2>EC2 動態數據</h2>
-            <div class="jumbotron">
-                <p>
-                    <?php include('get-index-meta-data.php'); ?>
-                    <hr />
-                    <?php include('get-cpu-load.php'); ?>
-                </p>
-            </div>
-        </section>
-
         <section id="contact">
             <h2>聯絡方式</h2>
             <p>以下是我的聯絡方式:<br>Email: daniel40906@gmail.com<br>Phone: 0909771479<br>GitHub: <a href="https://github.com/daniel921213">https://github.com/daniel921213</a></p>
@@ -66,8 +65,8 @@
 
     </div>
 
-    <script src="js/jquery.min.js"></script>
-    <script src="js/bootstrap.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="jquery.min.js"></script>
+    <script src="bootstrap.min.js"></script>
+    <script src="scripts.js"></script>
 </body>
 </html>
